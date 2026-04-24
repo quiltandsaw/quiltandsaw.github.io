@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hidden Thicket Quilt & Saw | Longarm Quilting & Woodworking in Wasilla, Alaska</title>
   <meta name="description" content="Hidden Thicket Quilt & Saw offers longarm quilting, custom quilting pattern design, and handcrafted woodworking in Wasilla, Alaska and the Mat-Su Valley." />
-
   <style>
     :root {
       --bg: #f7f3ec;
@@ -19,13 +18,17 @@
       --shadow: 0 20px 60px rgba(37, 34, 29, 0.12);
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
-      font-family: Georgia, "Times New Roman", serif;
+      font-family: Georgia, 'Times New Roman', serif;
       background: radial-gradient(circle at top left, #fff8ea 0, var(--bg) 34rem);
       color: var(--ink);
       line-height: 1.6;
@@ -35,15 +38,20 @@
       content: "";
       position: fixed;
       inset: 0;
-      background: url("images/stitch-background.jpg") center/700px repeat;
+      background: url('images/stitch-background.jpg') center/700px repeat;
       opacity: 0.06;
       pointer-events: none;
       z-index: -1;
     }
 
-    img { max-width: 100%; display: block; }
+    img {
+      max-width: 100%;
+      display: block;
+    }
 
-    a { color: inherit; }
+    a {
+      color: inherit;
+    }
 
     .wrap {
       width: min(1120px, calc(100% - 40px));
@@ -73,7 +81,18 @@
       gap: 12px;
       font-weight: 700;
       letter-spacing: 0.02em;
-      text-decoration: none;
+    }
+
+    .mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: var(--spruce);
+      color: var(--paper);
+      font-size: 20px;
+      box-shadow: 0 8px 24px rgba(47, 74, 60, 0.25);
     }
 
     .logo-mark {
@@ -93,9 +112,13 @@
       color: var(--muted);
     }
 
-    nav a { text-decoration: none; }
+    nav a {
+      text-decoration: none;
+    }
 
-    nav a:hover { color: var(--spruce); }
+    nav a:hover {
+      color: var(--spruce);
+    }
 
     .hero {
       padding: 92px 0 72px;
@@ -138,7 +161,9 @@
       margin-bottom: 12px;
     }
 
-    p { margin: 0; }
+    p {
+      margin: 0;
+    }
 
     .lead {
       margin-top: 22px;
@@ -200,15 +225,24 @@
       border: 1px solid rgba(196, 154, 74, 0.35);
       border-radius: 24px;
       pointer-events: none;
-      z-index: 2;
+    }
+
+    .pattern-box {
+      min-height: 420px;
+      border-radius: 24px;
+      background:
+        radial-gradient(circle at 24px 24px, rgba(47, 74, 60, 0.18) 2px, transparent 3px) 0 0 / 48px 48px,
+        linear-gradient(135deg, rgba(122, 75, 50, 0.16), rgba(47, 74, 60, 0.12)),
+        #efe5d3;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 36px;
     }
 
     .hero-photo {
-      min-height: 420px;
-      border-radius: 24px;
-      overflow: hidden;
       padding: 0;
-      background: #efe5d3;
+      overflow: hidden;
     }
 
     .hero-photo img {
@@ -285,17 +319,22 @@
       min-height: 190px;
       border-radius: 22px;
       border: 1px solid var(--line);
-      background: var(--paper);
+      background:
+        linear-gradient(135deg, rgba(47, 74, 60, 0.1), rgba(122, 75, 50, 0.16)),
+        var(--paper);
+      display: grid;
+      place-items: center;
+      padding: 18px;
       text-align: center;
       color: var(--muted);
       font-family: Arial, Helvetica, sans-serif;
       font-size: 14px;
       overflow: hidden;
-      box-shadow: 0 12px 32px rgba(37, 34, 29, 0.08);
     }
 
     .photo-tile {
       padding: 0;
+      align-content: stretch;
     }
 
     .photo-tile img {
@@ -306,8 +345,6 @@
 
     .photo-tile figcaption {
       padding: 12px;
-      font-weight: 700;
-      color: var(--ink);
     }
 
     .contact-box {
@@ -350,7 +387,9 @@
     }
 
     @media (max-width: 860px) {
-      nav ul { display: none; }
+      nav ul {
+        display: none;
+      }
 
       .hero-grid,
       .split,
@@ -367,15 +406,12 @@
         padding-top: 56px;
       }
 
-      .hero-photo,
-      .hero-photo img {
+      .pattern-box {
         min-height: 300px;
-        height: 300px;
       }
     }
   </style>
 </head>
-
 <body>
   <header>
     <div class="wrap nav">
@@ -383,13 +419,11 @@
         <img class="logo-mark" src="images/hidden-thicket-logo-transparent.png" alt="Hidden Thicket Quilt & Saw logo" />
         <span>Hidden Thicket Quilt &amp; Saw</span>
       </a>
-
       <nav aria-label="Main navigation">
         <ul>
           <li><a href="#services">Services</a></li>
           <li><a href="#quilting">Quilting</a></li>
           <li><a href="#woodworking">Woodworking</a></li>
-          <li><a href="#gallery">Gallery</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -403,17 +437,15 @@
           <div class="eyebrow">Wasilla, Alaska · By appointment</div>
           <h1>Longarm quilting and custom woodworking, made with care.</h1>
           <p class="lead">Based in Wasilla, we offer longarm quilting services, custom pattern design, and handcrafted woodworking, all built around the same idea: doing things carefully and doing them well.</p>
-
           <div class="actions">
-            <a class="btn btn-primary" href="mailto:hiddenthicket@outlook.com">Contact Us</a>
+            <a class="btn btn-primary" href="mailto:hello@quiltandsaw.com">Contact Us</a>
             <a class="btn btn-secondary" href="https://www.etsy.com/shop/quiltandsaw" target="_blank" rel="noopener">Visit Our Etsy Shop</a>
             <a class="btn btn-secondary" href="https://www.facebook.com/quiltandsaw" target="_blank" rel="noopener">Follow on Facebook</a>
           </div>
         </div>
-
-        <div class="hero-card" aria-label="Longarm quilting photo">
-          <div class="hero-photo">
-            <img src="images/longarm-quilting.jpg" alt="Innova M28 longarm quilting machine stitching a quilt" />
+        <div class="hero-card" aria-label="Decorative quilting and woodworking feature panel">
+          <div class="pattern-box hero-photo">
+            <img src="images/quilt-studio.jpg" alt="Hidden Thicket Quilt & Saw quilt studio with longarm machine" />
           </div>
         </div>
       </div>
@@ -426,18 +458,15 @@
           <h2>One small shop. Two careful crafts.</h2>
           <p class="muted">From quilt tops ready for finishing to custom wood projects that need a sharp eye and steady hand, we focus on clean details, practical design, and work that feels personal.</p>
         </div>
-
         <div class="cards">
           <article class="card">
             <h3>Longarm Quilting</h3>
             <p>Edge-to-edge quilting using an advanced Innova M28 automated longarm machine, with pattern and thread options selected to fit your quilt.</p>
           </article>
-
           <article class="card">
             <h3>Pattern Design</h3>
             <p>Custom digital quilting patterns, pantographs, and continuous-line designs made for clean stitching and strong visual flow.</p>
           </article>
-
           <article class="card">
             <h3>Woodworking</h3>
             <p>Handcrafted woodworking, cabinetry, and detail-focused shop work built for homes, makers, and practical everyday use.</p>
@@ -452,10 +481,8 @@
           <div class="eyebrow">Longarm quilting</div>
           <h2>Finishing touches that carry the whole quilt.</h2>
         </div>
-
         <div>
           <p class="muted">Choose from our growing pattern library or request a custom design tailored to your quilt. We serve Wasilla, Palmer, Big Lake, Eagle River, Anchorage, and surrounding communities.</p>
-
           <div class="feature-list">
             <div class="feature"><span class="dot"></span><span>Edge-to-edge quilting with smooth, balanced movement.</span></div>
             <div class="feature"><span class="dot"></span><span>Custom pantograph and digital quilting pattern design.</span></div>
@@ -471,10 +498,8 @@
           <div class="eyebrow">Woodworking</div>
           <h2>Cabinet-shop precision with a handmade pulse.</h2>
         </div>
-
         <div>
           <p class="muted">Our woodworking side focuses on useful, well-made pieces with clean lines and careful finishing. From cabinet details to custom shop-built projects, the goal is simple: sturdy, intentional work without shortcuts.</p>
-
           <div class="feature-list">
             <div class="feature"><span class="dot"></span><span>Custom woodworking and cabinet-style projects.</span></div>
             <div class="feature"><span class="dot"></span><span>Detail-focused sanding, finishing, and assembly.</span></div>
@@ -488,29 +513,25 @@
       <div class="wrap">
         <div class="intro">
           <div class="eyebrow">Gallery</div>
-          <h2>Quilting, design, and shop work.</h2>
-          <p class="muted">A quick look at the machine, stitch work, digital design process, and the shop behind the work.</p>
+          <h2>Add your project photos here.</h2>
+          <p class="muted">Replace these placeholder boxes with quilt photos, stitch closeups, woodworking details, logo images, or finished client projects.</p>
         </div>
-
         <div class="gallery">
           <figure class="tile photo-tile">
-            <img src="images/quilt-detail.jpg" alt="Close-up of edge-to-edge quilting stitches" />
-            <figcaption>E2E Stitches</figcaption>
+            <img src="images/longarm-quilting.jpg" alt="Innova M28 longarm quilting machine stitching a quilt" />
+            <figcaption>Longarm quilting</figcaption>
           </figure>
-
           <figure class="tile photo-tile">
-            <img src="images/pattern-workflow.jpg" alt="Digital quilting pattern workflow" />
-            <figcaption>Custom Design</figcaption>
+            <img src="images/quilt-detail.jpg" alt="Close-up view of quilting stitches on a colorful quilt" />
+            <figcaption>Stitch detail</figcaption>
           </figure>
-
+          <figure class="tile photo-tile">
+            <img src="images/pattern-workflow.jpg" alt="Digital quilting pattern workflow across AutoCAD, Art and Stitch, and AutoPilot" />
+            <figcaption>Pattern workflow</figcaption>
+          </figure>
           <figure class="tile photo-tile">
             <img src="images/woodshop.jpg" alt="Hidden Thicket Quilt & Saw woodworking shop" />
-            <figcaption>Workshop</figcaption>
-          </figure>
-
-          <figure class="tile photo-tile">
-            <img src="images/quilt-studio.jpg" alt="Hidden Thicket Quilt & Saw quilt studio" />
-            <figcaption>Quilt Studio</figcaption>
+            <figcaption>Woodshop</figcaption>
           </figure>
         </div>
       </div>
@@ -523,8 +544,7 @@
             <h2>Ready to talk through a project?</h2>
             <p>Send us a note to schedule a consultation, ask about longarm quilting, or discuss a custom pattern or woodworking project.</p>
           </div>
-
-          <a class="btn" href="mailto:hiddenthicket@outlook.com">Email Hidden Thicket</a>
+          <a class="btn" href="mailto:hello@quiltandsaw.com">Email Hidden Thicket</a>
         </div>
       </div>
     </section>
@@ -538,7 +558,7 @@
   </footer>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
