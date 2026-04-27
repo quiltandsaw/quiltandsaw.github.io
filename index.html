@@ -384,6 +384,68 @@
     }
 
 
+    .photo-tile a {
+      display: block;
+      width: 100%;
+      color: inherit;
+      text-decoration: none;
+      cursor: zoom-in;
+    }
+
+    .photo-tile a:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 4px;
+      border-radius: 16px;
+    }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 36px;
+      background: rgba(37, 34, 29, 0.86);
+    }
+
+    .lightbox.is-open {
+      display: flex;
+    }
+
+    .lightbox img {
+      max-width: min(96vw, 1500px);
+      max-height: 88vh;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      border-radius: 18px;
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+      background: var(--paper);
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 18px;
+      right: 22px;
+      width: 44px;
+      height: 44px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.5);
+      background: rgba(255,255,255,0.12);
+      color: white;
+      font-size: 32px;
+      line-height: 1;
+      cursor: pointer;
+    }
+
+    .lightbox-close:hover,
+    .lightbox-close:focus-visible {
+      background: rgba(255,255,255,0.22);
+      outline: none;
+    }
+
+
     .icon-btn {
       gap: 12px;
     }
@@ -577,6 +639,16 @@
         line-height: 1.55;
       }
 
+
+      .photo-tile a {
+        cursor: default;
+      }
+
+      .lightbox {
+        display: none !important;
+      }
+
+
       .call-btn {
         display: block;
         position: fixed;
@@ -703,16 +775,16 @@
         </div>
         <div class="gallery">
           <figure class="tile photo-tile">
-            <img src="images/pattern-1.jpg" alt="Pattern design" />
+            <a href="images/pattern-1.jpg" class="lightbox-link"><img src="images/pattern-1.jpg" alt="Pattern design" /></a>
           </figure>
           <figure class="tile photo-tile">
-            <img src="images/pattern-2.jpg" alt="Pattern design" />
+            <a href="images/pattern-2.jpg" class="lightbox-link"><img src="images/pattern-2.jpg" alt="Pattern design" /></a>
           </figure>
           <figure class="tile photo-tile">
-            <img src="images/pattern-3.jpg" alt="Pattern design" />
+            <a href="images/pattern-3.jpg" class="lightbox-link"><img src="images/pattern-3.jpg" alt="Pattern design" /></a>
           </figure>
           <figure class="tile photo-tile">
-            <img src="images/pattern-4.jpg" alt="Pattern design" />
+            <a href="images/pattern-4.jpg" class="lightbox-link"><img src="images/pattern-4.jpg" alt="Pattern design" /></a>
           </figure>
         </div>
         <div class="actions">
@@ -749,44 +821,44 @@
         </div>
         <div class="gallery">
           <figure class="tile photo-tile">
-            <img src="images/quilt-studio.jpg" alt="Hidden Thicket Quilt & Saw quilt studio" />
+            <a href="images/quilt-studio.jpg" class="lightbox-link"><img src="images/quilt-studio.jpg" alt="Hidden Thicket Quilt & Saw quilt studio" /></a>
             <figcaption>Our Quilt Studio</figcaption>
           </figure>
           <figure class="tile photo-tile">
-            <img src="images/quilt-detail.jpg" alt="Close-up view of quilting stitches on a colorful quilt" />
+            <a href="images/quilt-detail.jpg" class="lightbox-link"><img src="images/quilt-detail.jpg" alt="Close-up view of quilting stitches on a colorful quilt" /></a>
             <figcaption>E2E Stitching</figcaption>
           </figure>
           <figure class="tile photo-tile">
-            <img src="images/pattern-workflow.jpg" alt="Digital quilting pattern workflow across AutoCAD, Art and Stitch, and AutoPilot" />
+            <a href="images/pattern-workflow.jpg" class="lightbox-link"><img src="images/pattern-workflow.jpg" alt="Digital quilting pattern workflow across AutoCAD, Art and Stitch, and AutoPilot" /></a>
             <figcaption>Custom Design</figcaption>
           </figure>
           <figure class="tile photo-tile">
-            <img src="images/woodshop.jpg" alt="Hidden Thicket Quilt & Saw woodworking shop" />
+            <a href="images/woodshop.jpg" class="lightbox-link"><img src="images/woodshop.jpg" alt="Hidden Thicket Quilt & Saw woodworking shop" /></a>
             <figcaption>Our Workshop</figcaption>
           </figure>
           <figure class="tile photo-tile">
-            <img src="images/stitch-1.jpg" alt="Quilt stitching detail" />
+            <a href="images/stitch-1.jpg" class="lightbox-link"><img src="images/stitch-1.jpg" alt="Quilt stitching detail" /></a>
           </figure>
           <figure class="tile photo-tile">
-            <img src="images/stitch-2.jpg" alt="Longarm quilting process" />
+            <a href="images/stitch-2.jpg" class="lightbox-link"><img src="images/stitch-2.jpg" alt="Longarm quilting process" /></a>
           </figure>
           <figure class="tile photo-tile">
-            <img src="images/stitch-3.jpg" alt="Quilt fabric and stitching detail" />
+            <a href="images/stitch-3.jpg" class="lightbox-link"><img src="images/stitch-3.jpg" alt="Quilt fabric and stitching detail" /></a>
           </figure>
           <figure class="tile photo-tile">
-            <img src="images/stitch-4.jpg" alt="Geometric quilt stitching" />
+            <a href="images/stitch-4.jpg" class="lightbox-link"><img src="images/stitch-4.jpg" alt="Geometric quilt stitching" /></a>
           </figure>
           <figure class="tile photo-tile">
-            <img src="images/stitch-5.jpg" alt="Colorful quilt on longarm machine" />
+            <a href="images/stitch-5.jpg" class="lightbox-link"><img src="images/stitch-5.jpg" alt="Colorful quilt on longarm machine" /></a>
           </figure>
           <figure class="tile photo-tile">
-            <img src="images/stitch-6.jpg" alt="Longarm machine stitching detail" />
+            <a href="images/stitch-6.jpg" class="lightbox-link"><img src="images/stitch-6.jpg" alt="Longarm machine stitching detail" /></a>
           </figure>
           <figure class="tile photo-tile">
-            <img src="images/stitch-7.jpg" alt="Finished quilt blocks detail" />
+            <a href="images/stitch-7.jpg" class="lightbox-link"><img src="images/stitch-7.jpg" alt="Finished quilt blocks detail" /></a>
           </figure>
           <figure class="tile photo-tile">
-            <img src="images/stitch-8.jpg" alt="Quilt under longarm machine" />
+            <a href="images/stitch-8.jpg" class="lightbox-link"><img src="images/stitch-8.jpg" alt="Quilt under longarm machine" /></a>
           </figure>
         </div>
       </div>
@@ -815,8 +887,53 @@
 
   <a href="tel:19075211495" class="call-btn">Call Now</a>
 
+
+  <div class="lightbox" id="lightbox" aria-modal="true" role="dialog" aria-label="Full size gallery image">
+    <button class="lightbox-close" type="button" aria-label="Close full size image">&times;</button>
+    <img src="" alt="" id="lightbox-image" />
+  </div>
+
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightbox-image');
+    const lightboxClose = document.querySelector('.lightbox-close');
+    const desktopView = window.matchMedia('(min-width: 861px)');
+
+    function openLightbox(event) {
+      if (!desktopView.matches) return;
+      event.preventDefault();
+      const link = event.currentTarget;
+      const img = link.querySelector('img');
+      lightboxImage.src = link.href;
+      lightboxImage.alt = img ? img.alt : 'Gallery image';
+      lightbox.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+      lightboxClose.focus();
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('is-open');
+      lightboxImage.src = '';
+      document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('.lightbox-link').forEach((link) => {
+      link.addEventListener('click', openLightbox);
+    });
+
+    lightboxClose.addEventListener('click', closeLightbox);
+
+    lightbox.addEventListener('click', (event) => {
+      if (event.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && lightbox.classList.contains('is-open')) {
+        closeLightbox();
+      }
+    });
   </script>
 </body>
 </html>
