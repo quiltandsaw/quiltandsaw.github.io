@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hidden Thicket Quilt & Saw | Longarm Quilting & Woodworking in Wasilla, Alaska</title>
-  <meta name="description" content="Hidden Thicket Quilt & Saw offers longarm quilting, custom quilting pattern design, and handcrafted woodworking in Wasilla, Alaska and the Mat-Su Valley." />
+  <meta name="description" content="Hidden Thicket Quilt & Saw offers longarm quilting, pricing guidance, custom quilting pattern design, and handcrafted woodworking in Wasilla, Alaska and the Mat-Su Valley." />
   <style>
     :root {
       --bg: #f7f3ec;
@@ -511,6 +511,63 @@
       box-shadow: 0 10px 28px rgba(37,34,29,0.08);
     }
 
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 30px;
+    }
+
+    .price-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: 0 12px 32px rgba(37, 34, 29, 0.08);
+    }
+
+    .price {
+      display: block;
+      margin: 14px 0 8px;
+      font-size: clamp(31px, 4vw, 42px);
+      line-height: 1;
+      color: var(--spruce);
+      font-weight: 700;
+    }
+
+    .price small {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 15px;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .detail-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+      margin-top: 28px;
+    }
+
+    .detail-card {
+      background: rgba(255, 250, 241, 0.72);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 24px;
+    }
+
+    .simple-list {
+      margin: 14px 0 0;
+      padding-left: 20px;
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .simple-list li {
+      margin: 7px 0;
+    }
+
     .contact-box {
       background: var(--spruce);
       color: white;
@@ -656,7 +713,9 @@
       }
 
       .cards,
-      .gallery {
+      .gallery,
+      .pricing-grid,
+      .detail-grid {
         grid-template-columns: 1fr;
       }
 
@@ -720,6 +779,7 @@
         <ul>
           <li><a href="#services">Services</a></li>
           <li><a href="#quilting">Quilting</a></li>
+          <li><a href="#pricing">Pricing</a></li>
           <li><a href="#woodworking">Woodworking</a></li>
           <li><a href="#contact">Contact</a></li>
           <li class="nav-phone"><a href="tel:19075211495">907.521.1495</a></li>
@@ -796,13 +856,69 @@
             <div class="feature"><span class="dot"></span><span>Thread color guidance and pattern selection by appointment.</span></div>
           </div>
           <div class="pricing-note">
-            <p><strong>Edge-to-edge quilting starts at 2.5¢ per square inch</strong>, with final pricing based on quilt size, pattern density, thread choice, and prep needs. Minimum quilting fee $50.</p>
+            <p><strong>Edge-to-edge quilting starts at 2.5¢ per square inch.</strong> Library designs are quoted by quilting density: loose, moderate, or dense. Minimum quilting fee $50.</p>
           </div>
         </div>
       </div>
     </section>
 
     
+
+    <section id="pricing">
+      <div class="wrap">
+        <div class="intro">
+          <div class="eyebrow">Pricing &amp; intake</div>
+          <h2>Clear starting points before your quilt goes on the frame.</h2>
+          <p class="muted">Your estimate is based on quilt size, pattern choice, quilting density, thread, batting, and any preparation work needed. We will review the details with you before work begins.</p>
+        </div>
+
+        <div class="pricing-grid" aria-label="Longarm quilting pricing">
+          <article class="price-card">
+            <h3>Loose E2E</h3>
+            <span class="price">2.5¢ <small>/ in²</small></span>
+            <p class="muted">A lighter allover stitch for soft drape and simpler texture.</p>
+          </article>
+          <article class="price-card">
+            <h3>Moderate E2E</h3>
+            <span class="price">3.0¢ <small>/ in²</small></span>
+            <p class="muted">Our everyday middle ground: visible texture without overworking the quilt.</p>
+          </article>
+          <article class="price-card">
+            <h3>Dense E2E</h3>
+            <span class="price">3.75¢ <small>/ in²</small></span>
+            <p class="muted">More quilting, more texture, and a firmer finished hand.</p>
+          </article>
+        </div>
+
+        <div class="detail-grid">
+          <article class="detail-card">
+            <h3>Other services</h3>
+            <ul class="simple-list">
+              <li>Minimum quilting fee: $50</li>
+              <li>Custom design drafting: $50/hr, $25 minimum</li>
+              <li>Finishing labor: $50/hr for ironing, piecing, or thread snipping</li>
+              <li>Binding: $0.25 per linear inch</li>
+              <li>Specialty thread available by request: $10 fee</li>
+            </ul>
+          </article>
+          <article class="detail-card">
+            <h3>Helpful intake details</h3>
+            <ul class="simple-list">
+              <li>Measure quilt size as length × width to calculate total square inches.</li>
+              <li>Bring or note your quilt description, pattern preference, and any special instructions.</li>
+              <li>Pricing includes OMNI 40 wt thread, with 160+ thread colors available.</li>
+              <li>We recommend Warm &amp; Natural batting for consistent results.</li>
+              <li>Standard turnaround is typically 1–2 weeks; rush service may be available.</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="pricing-note">
+          <p><strong>Batting note:</strong> Warm &amp; Natural from The Warm Company is recommended. Expect about 3% shrinkage with cold washing; warm washing can create a more puckered finish. Final pricing reflects the information provided at intake, and any adjustments will be reviewed before work begins.</p>
+        </div>
+      </div>
+    </section>
+
     <section id="pattern-design">
       <div class="wrap">
         <div class="intro">
@@ -930,7 +1046,7 @@
         <div class="contact-box">
           <div>
             <h2>Ready to talk through a project?</h2>
-            <p>Send us a note to schedule a consultation, ask about longarm quilting, or discuss a custom pattern or woodworking project.</p>
+            <p>Send us a note to schedule a consultation, request an estimate, or start the intake process for longarm quilting, custom pattern design, or woodworking.</p>
             <p class="phone-line">Phone: <a href="tel:19075211495">907.521.1495</a></p>
           </div>
           <a class="btn" href="mailto:hiddenthicket@outlook.com">Email Us Today</a>
@@ -951,7 +1067,9 @@
 
   <div class="lightbox" id="lightbox" aria-modal="true" role="dialog" aria-label="Full size gallery image">
     <button class="lightbox-close" type="button" aria-label="Close full size image">&times;</button>
+    <button class="lightbox-nav lightbox-prev" type="button" aria-label="Previous image">&#8249;</button>
     <img src="" alt="" id="lightbox-image" />
+    <button class="lightbox-nav lightbox-next" type="button" aria-label="Next image">&#8250;</button>
   </div>
 
   <script>
