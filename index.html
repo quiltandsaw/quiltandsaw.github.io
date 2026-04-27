@@ -446,6 +446,39 @@
     }
 
 
+    .lightbox-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 52px;
+      height: 52px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.5);
+      background: rgba(255,255,255,0.12);
+      color: white;
+      font-size: 34px;
+      line-height: 1;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      user-select: none;
+    }
+
+    .lightbox-nav:hover,
+    .lightbox-nav:focus-visible {
+      background: rgba(255,255,255,0.22);
+      outline: none;
+    }
+
+    .lightbox-prev {
+      left: 22px;
+    }
+
+    .lightbox-next {
+      right: 22px;
+    }
+
+
     .icon-btn {
       gap: 12px;
     }
@@ -648,6 +681,10 @@
         display: none !important;
       }
 
+      .lightbox-nav {
+        display: none;
+      }
+
 
       .call-btn {
         display: block;
@@ -775,16 +812,16 @@
         </div>
         <div class="gallery">
           <figure class="tile photo-tile">
-            <a href="images/pattern-1.jpg" class="lightbox-link"><img src="images/pattern-1.jpg" alt="Pattern design" /></a>
+            <a href="images/pattern-1.jpg" class="lightbox-link"><img src="images/pattern-1.jpg" alt="Pattern design" loading="lazy" decoding="async" /></a>
           </figure>
           <figure class="tile photo-tile">
-            <a href="images/pattern-2.jpg" class="lightbox-link"><img src="images/pattern-2.jpg" alt="Pattern design" /></a>
+            <a href="images/pattern-2.jpg" class="lightbox-link"><img src="images/pattern-2.jpg" alt="Pattern design" loading="lazy" decoding="async" /></a>
           </figure>
           <figure class="tile photo-tile">
-            <a href="images/pattern-3.jpg" class="lightbox-link"><img src="images/pattern-3.jpg" alt="Pattern design" /></a>
+            <a href="images/pattern-3.jpg" class="lightbox-link"><img src="images/pattern-3.jpg" alt="Pattern design" loading="lazy" decoding="async" /></a>
           </figure>
           <figure class="tile photo-tile">
-            <a href="images/pattern-4.jpg" class="lightbox-link"><img src="images/pattern-4.jpg" alt="Pattern design" /></a>
+            <a href="images/pattern-4.jpg" class="lightbox-link"><img src="images/pattern-4.jpg" alt="Pattern design" loading="lazy" decoding="async" /></a>
           </figure>
         </div>
         <div class="actions">
@@ -821,44 +858,68 @@
         </div>
         <div class="gallery">
           <figure class="tile photo-tile">
-            <a href="images/quilt-studio.jpg" class="lightbox-link"><img src="images/quilt-studio.jpg" alt="Hidden Thicket Quilt & Saw quilt studio" /></a>
+            <a href="images/quilt-studio.jpg" class="lightbox-link"><img src="images/quilt-studio.jpg" alt="Hidden Thicket Quilt & Saw quilt studio" loading="lazy" decoding="async" /></a>
             <figcaption>Our Quilt Studio</figcaption>
           </figure>
           <figure class="tile photo-tile">
-            <a href="images/quilt-detail.jpg" class="lightbox-link"><img src="images/quilt-detail.jpg" alt="Close-up view of quilting stitches on a colorful quilt" /></a>
+            <a href="images/quilt-detail.jpg" class="lightbox-link"><img src="images/quilt-detail.jpg" alt="Close-up view of quilting stitches on a colorful quilt" loading="lazy" decoding="async" /></a>
             <figcaption>E2E Stitching</figcaption>
           </figure>
           <figure class="tile photo-tile">
-            <a href="images/pattern-workflow.jpg" class="lightbox-link"><img src="images/pattern-workflow.jpg" alt="Digital quilting pattern workflow across AutoCAD, Art and Stitch, and AutoPilot" /></a>
+            <a href="images/pattern-workflow.jpg" class="lightbox-link"><img src="images/pattern-workflow.jpg" alt="Digital quilting pattern workflow across AutoCAD, Art and Stitch, and AutoPilot" loading="lazy" decoding="async" /></a>
             <figcaption>Custom Design</figcaption>
           </figure>
           <figure class="tile photo-tile">
-            <a href="images/woodshop.jpg" class="lightbox-link"><img src="images/woodshop.jpg" alt="Hidden Thicket Quilt & Saw woodworking shop" /></a>
+            <a href="images/woodshop.jpg" class="lightbox-link"><img src="images/woodshop.jpg" alt="Hidden Thicket Quilt & Saw woodworking shop" loading="lazy" decoding="async" /></a>
             <figcaption>Our Workshop</figcaption>
           </figure>
           <figure class="tile photo-tile">
-            <a href="images/stitch-1.jpg" class="lightbox-link"><img src="images/stitch-1.jpg" alt="Quilt stitching detail" /></a>
+            <a href="images/stitch-1.jpg" class="lightbox-link"><img src="images/stitch-1.jpg" alt="Quilt stitching detail" loading="lazy" decoding="async" /></a>
           </figure>
           <figure class="tile photo-tile">
-            <a href="images/stitch-2.jpg" class="lightbox-link"><img src="images/stitch-2.jpg" alt="Longarm quilting process" /></a>
+            <a href="images/stitch-2.jpg" class="lightbox-link"><img src="images/stitch-2.jpg" alt="Longarm quilting process" loading="lazy" decoding="async" /></a>
           </figure>
           <figure class="tile photo-tile">
-            <a href="images/stitch-3.jpg" class="lightbox-link"><img src="images/stitch-3.jpg" alt="Quilt fabric and stitching detail" /></a>
+            <a href="images/stitch-3.jpg" class="lightbox-link"><img src="images/stitch-3.jpg" alt="Quilt fabric and stitching detail" loading="lazy" decoding="async" /></a>
           </figure>
           <figure class="tile photo-tile">
-            <a href="images/stitch-4.jpg" class="lightbox-link"><img src="images/stitch-4.jpg" alt="Geometric quilt stitching" /></a>
+            <a href="images/stitch-4.jpg" class="lightbox-link"><img src="images/stitch-4.jpg" alt="Geometric quilt stitching" loading="lazy" decoding="async" /></a>
           </figure>
           <figure class="tile photo-tile">
-            <a href="images/stitch-5.jpg" class="lightbox-link"><img src="images/stitch-5.jpg" alt="Colorful quilt on longarm machine" /></a>
+            <a href="images/stitch-5.jpg" class="lightbox-link"><img src="images/stitch-5.jpg" alt="Colorful quilt on longarm machine" loading="lazy" decoding="async" /></a>
           </figure>
           <figure class="tile photo-tile">
-            <a href="images/stitch-6.jpg" class="lightbox-link"><img src="images/stitch-6.jpg" alt="Longarm machine stitching detail" /></a>
+            <a href="images/stitch-6.jpg" class="lightbox-link"><img src="images/stitch-6.jpg" alt="Longarm machine stitching detail" loading="lazy" decoding="async" /></a>
           </figure>
           <figure class="tile photo-tile">
-            <a href="images/stitch-7.jpg" class="lightbox-link"><img src="images/stitch-7.jpg" alt="Finished quilt blocks detail" /></a>
+            <a href="images/stitch-7.jpg" class="lightbox-link"><img src="images/stitch-7.jpg" alt="Finished quilt blocks detail" loading="lazy" decoding="async" /></a>
           </figure>
           <figure class="tile photo-tile">
-            <a href="images/stitch-8.jpg" class="lightbox-link"><img src="images/stitch-8.jpg" alt="Quilt under longarm machine" /></a>
+            <a href="images/stitch-8.jpg" class="lightbox-link"><img src="images/stitch-8.jpg" alt="Quilt under longarm machine" loading="lazy" decoding="async" /></a>
+          </figure>
+          <figure class="tile photo-tile">
+            <a href="images/stitch-9.jpg" class="lightbox-link"><img src="images/stitch-9.jpg" alt="Quilt stitching detail" loading="lazy" decoding="async" /></a>
+          </figure>
+          <figure class="tile photo-tile">
+            <a href="images/stitch-10.jpg" class="lightbox-link"><img src="images/stitch-10.jpg" alt="Quilt stitching detail" loading="lazy" decoding="async" /></a>
+          </figure>
+          <figure class="tile photo-tile">
+            <a href="images/stitch-11.jpg" class="lightbox-link"><img src="images/stitch-11.jpg" alt="Quilt stitching detail" loading="lazy" decoding="async" /></a>
+          </figure>
+          <figure class="tile photo-tile">
+            <a href="images/stitch-12.jpg" class="lightbox-link"><img src="images/stitch-12.jpg" alt="Quilt stitching detail" loading="lazy" decoding="async" /></a>
+          </figure>
+          <figure class="tile photo-tile">
+            <a href="images/stitch-13.jpg" class="lightbox-link"><img src="images/stitch-13.jpg" alt="Quilt stitching detail" loading="lazy" decoding="async" /></a>
+          </figure>
+          <figure class="tile photo-tile">
+            <a href="images/stitch-14.jpg" class="lightbox-link"><img src="images/stitch-14.jpg" alt="Quilt stitching detail" loading="lazy" decoding="async" /></a>
+          </figure>
+          <figure class="tile photo-tile">
+            <a href="images/stitch-15.jpg" class="lightbox-link"><img src="images/stitch-15.jpg" alt="Quilt stitching detail" loading="lazy" decoding="async" /></a>
+          </figure>
+          <figure class="tile photo-tile">
+            <a href="images/stitch-16.jpg" class="lightbox-link"><img src="images/stitch-16.jpg" alt="Quilt stitching detail" loading="lazy" decoding="async" /></a>
           </figure>
         </div>
       </div>
@@ -899,15 +960,26 @@
     const lightbox = document.getElementById('lightbox');
     const lightboxImage = document.getElementById('lightbox-image');
     const lightboxClose = document.querySelector('.lightbox-close');
+    const lightboxPrev = document.querySelector('.lightbox-prev');
+    const lightboxNext = document.querySelector('.lightbox-next');
     const desktopView = window.matchMedia('(min-width: 861px)');
+    const galleryLinks = Array.from(document.querySelectorAll('.lightbox-link'));
+    let currentIndex = 0;
+    let touchStartX = 0;
+
+    function showLightboxImage(index) {
+      currentIndex = (index + galleryLinks.length) % galleryLinks.length;
+      const link = galleryLinks[currentIndex];
+      const img = link.querySelector('img');
+      lightboxImage.src = link.href;
+      lightboxImage.alt = img ? img.alt : 'Gallery image';
+    }
 
     function openLightbox(event) {
       if (!desktopView.matches) return;
       event.preventDefault();
-      const link = event.currentTarget;
-      const img = link.querySelector('img');
-      lightboxImage.src = link.href;
-      lightboxImage.alt = img ? img.alt : 'Gallery image';
+      const index = galleryLinks.indexOf(event.currentTarget);
+      showLightboxImage(index);
       lightbox.classList.add('is-open');
       document.body.style.overflow = 'hidden';
       lightboxClose.focus();
@@ -919,18 +991,50 @@
       document.body.style.overflow = '';
     }
 
-    document.querySelectorAll('.lightbox-link').forEach((link) => {
+    function showPreviousImage() {
+      showLightboxImage(currentIndex - 1);
+    }
+
+    function showNextImage() {
+      showLightboxImage(currentIndex + 1);
+    }
+
+    galleryLinks.forEach((link) => {
       link.addEventListener('click', openLightbox);
     });
 
     lightboxClose.addEventListener('click', closeLightbox);
+    lightboxPrev.addEventListener('click', showPreviousImage);
+    lightboxNext.addEventListener('click', showNextImage);
 
     lightbox.addEventListener('click', (event) => {
       if (event.target === lightbox) closeLightbox();
     });
 
+    lightbox.addEventListener('touchstart', (event) => {
+      touchStartX = event.changedTouches[0].screenX;
+    }, { passive: true });
+
+    lightbox.addEventListener('touchend', (event) => {
+      const touchEndX = event.changedTouches[0].screenX;
+      const swipeDistance = touchEndX - touchStartX;
+      if (Math.abs(swipeDistance) < 50) return;
+      if (swipeDistance > 0) {
+        showPreviousImage();
+      } else {
+        showNextImage();
+      }
+    }, { passive: true });
+
     document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape' && lightbox.classList.contains('is-open')) {
+      if (!lightbox.classList.contains('is-open')) return;
+      if (event.key === 'Escape') closeLightbox();
+      if (event.key === 'ArrowLeft') showPreviousImage();
+      if (event.key === 'ArrowRight') showNextImage();
+    });
+
+    desktopView.addEventListener('change', () => {
+      if (!desktopView.matches && lightbox.classList.contains('is-open')) {
         closeLightbox();
       }
     });
