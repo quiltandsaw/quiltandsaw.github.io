@@ -668,6 +668,8 @@
       display: none;
     }
 
+    .gallery-controls { display: none; }
+    .gallery-controls [hidden] { display: none; }
     @media (max-width: 860px) {
       html,
       body {
@@ -776,17 +778,26 @@
         grid-template-columns: 1fr;
       }
 
-      .photo-tile a {
-        cursor: default;
+      #gallery .gallery, #pattern-design .gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
       }
-
-      .lightbox {
-        display: none !important;
+      #gallery .photo-tile, #pattern-design .photo-tile {
+        margin: 0; min-width: 0; min-height: 0;
       }
-
-      .lightbox-nav {
-        display: none;
+      .gallery .mobile-hidden { display: none; }
+      .gallery-controls {
+        display: flex; flex-wrap: wrap; justify-content: center;
+        gap: 12px; margin-top: 20px;
+        font-family: Arial, Helvetica, sans-serif;
       }
+      .gallery-controls p { width: 100%; text-align: center; }
+      .gallery-controls button { cursor: pointer; }
+      .lightbox { padding: 70px 12px 100px; }
+      .lightbox img { max-width: 100%; max-height: calc(100dvh - 180px); }
+      .lightbox-nav { top: auto; bottom: 22px; transform: none; }
+      .lightbox-prev { left: calc(50% - 64px); }
+      .lightbox-next { right: calc(50% - 64px); }
 
 
       .call-btn {
@@ -972,54 +983,6 @@
       </div>
     </section>
 
-    <section id="pattern-design">
-      <div class="wrap">
-        <div class="intro">
-          <div class="eyebrow">Custom pattern design</div>
-          <h2>Original quilting designs created for beautiful texture and reliable stitch quality</h2>
-          <p class="muted">We offer a large library of edge-to-edge quilt patterns and can help you choose a design that complements your work. We also create custom artwork, with new original patterns added regularly. A small sample is shown here. Each pattern is individually stitch-tested for smooth machine quilting and clean stitch quality, including our custom designs, and is available for use on your project or for purchase through Etsy.</p>
-        </div>
-        <div class="gallery">
-          <figure class="tile photo-tile">
-            <a href="images/pattern-1.jpg" class="lightbox-link"><img src="images/pattern-1.jpg" alt="Pattern design" loading="lazy" decoding="async" /></a>
-          </figure>
-          <figure class="tile photo-tile">
-            <a href="images/pattern-2.jpg" class="lightbox-link"><img src="images/pattern-2.jpg" alt="Pattern design" loading="lazy" decoding="async" /></a>
-          </figure>
-          <figure class="tile photo-tile">
-            <a href="images/pattern-3.jpg" class="lightbox-link"><img src="images/pattern-3.jpg" alt="Pattern design" loading="lazy" decoding="async" /></a>
-          </figure>
-          <figure class="tile photo-tile">
-            <a href="images/pattern-4.jpg" class="lightbox-link"><img src="images/pattern-4.jpg" alt="Pattern design" loading="lazy" decoding="async" /></a>
-          </figure>
-        </div>
-        <div class="actions">
-          <a class="btn btn-secondary icon-btn" href="https://quiltandsaw.etsy.com" target="_blank" rel="noopener" onclick="gtag('event','etsy_click',{ 'event_category':'engagement','event_label':'pattern_section' });">
-            <img src="images/etsy-icon.png" alt="Etsy" />
-            Browse our custom pattern library on Etsy
-          </a>
-        </div>
-      </div>
-    </section>
-
-
-    <section id="woodworking">
-      <div class="wrap split">
-        <div>
-          <div class="eyebrow">Woodworking</div>
-          <h2>Cabinet-shop precision with a handmade pulse</h2>
-        </div>
-        <div>
-          <p class="muted">Beyond quilting, we enjoy building handcrafted woodworking projects, sewing furniture, quilt racks, cabinetry, and custom shop solutions designed to make creative spaces more functional and enjoyable.</p>
-          <div class="feature-list">
-            <div class="feature"><span class="dot"></span><span>Custom woodworking and cabinet-style projects.</span></div>
-            <div class="feature"><span class="dot"></span><span>Detail-focused sanding, finishing, and assembly.</span></div>
-            <div class="feature"><span class="dot"></span><span>Built locally in the Mat-Su Valley.</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section id="gallery">
       <div class="wrap">
         <div class="intro gallery-heading">
@@ -1126,9 +1089,133 @@
           <figure class="tile photo-tile">
             <a href="images/stitch-28.jpg" class="lightbox-link"><img src="images/stitch-28.jpg" alt="Quilt stitching detail" loading="lazy" decoding="async" /></a>
           </figure>
+          <figure class="tile photo-tile">
+            <a href="images/stitch-29.jpg" class="lightbox-link"><img src="images/stitch-29.jpg" alt="Quilt stitching detail" loading="lazy" decoding="async" /></a>
+          </figure>
+          <figure class="tile photo-tile">
+            <a href="images/stitch-30.jpg" class="lightbox-link"><img src="images/stitch-30.jpg" alt="Quilt stitching detail" loading="lazy" decoding="async" /></a>
+          </figure>
+          <figure class="tile photo-tile">
+            <a href="images/stitch-31.jpg" class="lightbox-link"><img src="images/stitch-31.jpg" alt="Quilt stitching detail" loading="lazy" decoding="async" /></a>
+          </figure>
+          <figure class="tile photo-tile">
+            <a href="images/stitch-32.jpg" class="lightbox-link"><img src="images/stitch-32.jpg" alt="Quilt stitching detail" loading="lazy" decoding="async" /></a>
+          </figure>
+          <figure class="tile photo-tile">
+            <a href="images/stitch-33.jpg" class="lightbox-link"><img src="images/stitch-33.jpg" alt="Quilt stitching detail" loading="lazy" decoding="async" /></a>
+          </figure>
+          <figure class="tile photo-tile">
+            <a href="images/stitch-34.jpg" class="lightbox-link"><img src="images/stitch-34.jpg" alt="Quilt stitching detail" loading="lazy" decoding="async" /></a>
+          </figure>
+          <figure class="tile photo-tile">
+            <a href="images/stitch-35.jpg" class="lightbox-link"><img src="images/stitch-35.jpg" alt="Quilt stitching detail" loading="lazy" decoding="async" /></a>
+          </figure>
+          <figure class="tile photo-tile">
+            <a href="images/stitch-36.jpg" class="lightbox-link"><img src="images/stitch-36.jpg" alt="Quilt stitching detail" loading="lazy" decoding="async" /></a>
+          </figure>
+          <figure class="tile photo-tile">
+            <a href="images/stitch-37.jpg" class="lightbox-link"><img src="images/stitch-37.jpg" alt="Quilt stitching detail" loading="lazy" decoding="async" /></a>
+          </figure>
+          <figure class="tile photo-tile">
+            <a href="images/stitch-38.jpg" class="lightbox-link"><img src="images/stitch-38.jpg" alt="Quilt stitching detail" loading="lazy" decoding="async" /></a>
+          </figure>
+          <figure class="tile photo-tile">
+            <a href="images/stitch-39.jpg" class="lightbox-link"><img src="images/stitch-39.jpg" alt="Quilt stitching detail" loading="lazy" decoding="async" /></a>
+          </figure>
+          <figure class="tile photo-tile">
+            <a href="images/stitch-40.jpg" class="lightbox-link"><img src="images/stitch-40.jpg" alt="Quilt stitching detail" loading="lazy" decoding="async" /></a>
+          </figure>
         </div>
       </div>
     </section>
+
+    <section id="pattern-design">
+      <div class="wrap">
+        <div class="intro">
+          <div class="eyebrow">Custom pattern design</div>
+          <h2>Original quilting designs created for beautiful texture and reliable stitch quality</h2>
+          <p class="muted">We offer a large library of edge-to-edge quilt patterns and can help you choose a design that complements your work. We also create custom artwork, with new original patterns added regularly. A small sample is shown here. Each pattern is individually stitch-tested for smooth machine quilting and clean stitch quality, including our custom designs, and is available for use on your project or for purchase through Etsy.</p>
+        </div>
+        <div class="gallery">
+          <figure class="tile photo-tile">
+            <a href="images/pattern-1.jpg" class="lightbox-link"><img src="images/pattern-1.jpg" alt="Pattern design" loading="lazy" decoding="async" /></a>
+          </figure>
+          <figure class="tile photo-tile">
+            <a href="images/pattern-2.jpg" class="lightbox-link"><img src="images/pattern-2.jpg" alt="Pattern design" loading="lazy" decoding="async" /></a>
+          </figure>
+          <figure class="tile photo-tile">
+            <a href="images/pattern-3.jpg" class="lightbox-link"><img src="images/pattern-3.jpg" alt="Pattern design" loading="lazy" decoding="async" /></a>
+          </figure>
+          <figure class="tile photo-tile">
+            <a href="images/pattern-4.jpg" class="lightbox-link"><img src="images/pattern-4.jpg" alt="Pattern design" loading="lazy" decoding="async" /></a>
+          </figure>
+          <figure class="tile photo-tile">
+            <a href="images/pattern-5.jpg" class="lightbox-link"><img src="images/pattern-5.jpg" alt="Pattern design 5" loading="lazy" decoding="async" /></a>
+          </figure>
+          <figure class="tile photo-tile">
+            <a href="images/pattern-6.jpg" class="lightbox-link"><img src="images/pattern-6.jpg" alt="Pattern design 6" loading="lazy" decoding="async" /></a>
+          </figure>
+          <figure class="tile photo-tile">
+            <a href="images/pattern-7.jpg" class="lightbox-link"><img src="images/pattern-7.jpg" alt="Pattern design 7" loading="lazy" decoding="async" /></a>
+          </figure>
+          <figure class="tile photo-tile">
+            <a href="images/pattern-8.jpg" class="lightbox-link"><img src="images/pattern-8.jpg" alt="Pattern design 8" loading="lazy" decoding="async" /></a>
+          </figure>
+          <figure class="tile photo-tile">
+            <a href="images/pattern-9.jpg" class="lightbox-link"><img src="images/pattern-9.jpg" alt="Pattern design 9" loading="lazy" decoding="async" /></a>
+          </figure>
+          <figure class="tile photo-tile">
+            <a href="images/pattern-10.jpg" class="lightbox-link"><img src="images/pattern-10.jpg" alt="Pattern design 10" loading="lazy" decoding="async" /></a>
+          </figure>
+          <figure class="tile photo-tile">
+            <a href="images/pattern-11.jpg" class="lightbox-link"><img src="images/pattern-11.jpg" alt="Pattern design 11" loading="lazy" decoding="async" /></a>
+          </figure>
+          <figure class="tile photo-tile">
+            <a href="images/pattern-12.jpg" class="lightbox-link"><img src="images/pattern-12.jpg" alt="Pattern design 12" loading="lazy" decoding="async" /></a>
+          </figure>
+          <figure class="tile photo-tile">
+            <a href="images/pattern-13.jpg" class="lightbox-link"><img src="images/pattern-13.jpg" alt="Pattern design 13" loading="lazy" decoding="async" /></a>
+          </figure>
+          <figure class="tile photo-tile">
+            <a href="images/pattern-14.jpg" class="lightbox-link"><img src="images/pattern-14.jpg" alt="Pattern design 14" loading="lazy" decoding="async" /></a>
+          </figure>
+          <figure class="tile photo-tile">
+            <a href="images/pattern-15.jpg" class="lightbox-link"><img src="images/pattern-15.jpg" alt="Pattern design 15" loading="lazy" decoding="async" /></a>
+          </figure>
+          <figure class="tile photo-tile">
+            <a href="images/pattern-16.jpg" class="lightbox-link"><img src="images/pattern-16.jpg" alt="Pattern design 16" loading="lazy" decoding="async" /></a>
+          </figure>
+        </div>
+        <div class="actions">
+          <a class="btn btn-secondary icon-btn" href="https://quiltandsaw.etsy.com" target="_blank" rel="noopener" onclick="gtag('event','etsy_click',{ 'event_category':'engagement','event_label':'pattern_section' });">
+            <img src="images/etsy-icon.png" alt="Etsy" />
+            Browse our custom pattern library on Etsy
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="woodworking">
+      <div class="wrap split">
+        <div>
+          <div class="eyebrow">Woodworking</div>
+          <h2>Cabinet-shop precision with a handmade pulse</h2>
+        </div>
+        <div>
+          <p class="muted">Beyond quilting, we enjoy building handcrafted woodworking projects, sewing furniture, quilt racks, cabinetry, and custom shop solutions designed to make creative spaces more functional and enjoyable.</p>
+          <div class="feature-list">
+            <div class="feature"><span class="dot"></span><span>Custom woodworking and cabinet-style projects.</span></div>
+            <div class="feature"><span class="dot"></span><span>Detail-focused sanding, finishing, and assembly.</span></div>
+            <div class="feature"><span class="dot"></span><span>Built locally in the Mat-Su Valley.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
 
     <section id="contact">
       <div class="wrap">
@@ -1171,21 +1258,24 @@
     const lightboxNext = document.querySelector('.lightbox-next');
     const desktopView = window.matchMedia('(min-width: 861px)');
     const galleryLinks = Array.from(document.querySelectorAll('.lightbox-link'));
+    let activeLinks = galleryLinks;
+    let opener = null;
     let currentIndex = 0;
     let touchStartX = 0;
 
     function showLightboxImage(index) {
-      currentIndex = (index + galleryLinks.length) % galleryLinks.length;
-      const link = galleryLinks[currentIndex];
+      currentIndex = (index + activeLinks.length) % activeLinks.length;
+      const link = activeLinks[currentIndex];
       const img = link.querySelector('img');
       lightboxImage.src = link.href;
       lightboxImage.alt = img ? img.alt : 'Gallery image';
     }
 
     function openLightbox(event) {
-      if (!desktopView.matches) return;
       event.preventDefault();
-      const index = galleryLinks.indexOf(event.currentTarget);
+      opener = event.currentTarget;
+      activeLinks = Array.from(opener.closest('.gallery').querySelectorAll('.lightbox-link'));
+      const index = activeLinks.indexOf(opener);
       const clickedImage = event.currentTarget.querySelector('img');
       if (typeof gtag === 'function' && clickedImage) {
         gtag('event','gallery_image_click',{
@@ -1203,6 +1293,7 @@
       lightbox.classList.remove('is-open');
       lightboxImage.src = '';
       document.body.style.overflow = '';
+      if (opener) opener.focus();
     }
 
     function showPreviousImage() {
@@ -1242,9 +1333,57 @@
 
     document.addEventListener('keydown', (event) => {
       if (!lightbox.classList.contains('is-open')) return;
+      if (event.key === 'Tab') {
+        const controls = [lightboxClose, lightboxPrev, lightboxNext];
+        const position = controls.indexOf(document.activeElement);
+        event.preventDefault();
+        controls[(position + (event.shiftKey ? 2 : 1)) % controls.length].focus();
+      }
       if (event.key === 'Escape') closeLightbox();
       if (event.key === 'ArrowLeft') showPreviousImage();
       if (event.key === 'ArrowRight') showNextImage();
+    });
+
+    // Keep using numbered filenames when replacing or adding gallery images.
+    [['gallery', 'quilts'], ['pattern-design', 'patterns']].forEach(([sectionId, label]) => {
+      const gallery = document.querySelector('#' + sectionId + ' .gallery');
+      const tiles = Array.from(gallery.querySelectorAll('.photo-tile'));
+      gallery.id = sectionId + '-images';
+      let visibleCount = 6;
+      const controls = document.createElement('div');
+      controls.className = 'gallery-controls';
+      const status = document.createElement('p');
+      status.setAttribute('aria-live', 'polite');
+      const more = document.createElement('button');
+      const fewer = document.createElement('button');
+      [more, fewer].forEach(button => {
+        button.type = 'button';
+        button.className = 'btn btn-secondary';
+        button.setAttribute('aria-controls', gallery.id);
+      });
+      more.textContent = 'Show more ' + label;
+      fewer.textContent = 'Show fewer';
+      controls.append(status, more, fewer);
+      gallery.after(controls);
+      function render() {
+        tiles.forEach((tile, index) => tile.classList.toggle('mobile-hidden', index >= visibleCount));
+        status.textContent = 'Showing ' + Math.min(visibleCount, tiles.length) + ' of ' + tiles.length + ' ' + label;
+        more.hidden = visibleCount >= tiles.length;
+        fewer.hidden = visibleCount <= 6;
+      }
+      more.addEventListener('click', () => {
+        const firstNew = visibleCount;
+        visibleCount = Math.min(visibleCount + 6, tiles.length);
+        render();
+        tiles[firstNew].querySelector('a').focus();
+      });
+      fewer.addEventListener('click', () => {
+        visibleCount = 6;
+        render();
+        more.focus({ preventScroll: true });
+        gallery.scrollIntoView({ block: 'start' });
+      });
+      render();
     });
 
     desktopView.addEventListener('change', () => {
