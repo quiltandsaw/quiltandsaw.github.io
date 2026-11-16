@@ -128,6 +128,7 @@
 
     .nav {
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
       gap: 24px;
@@ -171,6 +172,7 @@
 
     nav ul {
       display: flex;
+      flex-wrap: wrap;
       gap: 22px;
       list-style: none;
       padding: 0;
@@ -181,6 +183,7 @@
     }
 
     nav a {
+      white-space: nowrap;
       text-decoration: none;
     }
 
@@ -193,6 +196,28 @@
       color: var(--spruce);
       text-decoration: none;
       letter-spacing: 0.03em;
+    }
+
+    .desktop-nav { margin-left: auto; }
+    .mobile-shortcuts { display: none; }
+    section[id] { scroll-margin-top: 170px; }
+    .email-line {
+      font-family: Arial, Helvetica, sans-serif;
+      overflow-wrap: anywhere;
+    }
+    .email-line a { text-underline-offset: 3px; }
+    .review-link {
+      margin-top: 16px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--spruce);
+    }
+    .review-link a { display: inline-flex; align-items: center; min-height: 44px; text-underline-offset: 4px; }
+    .mobile-shortcuts a:focus-visible,
+    .desktop-nav a:focus-visible,
+    .email-line a:focus-visible,
+    .review-link a:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 3px;
     }
 
     .hero {
@@ -688,9 +713,27 @@
         width: min(100% - 24px, 1120px);
       }
 
-      nav ul {
-        display: none;
+      .desktop-nav { display: none; }
+      section[id] { scroll-margin-top: 16px; }
+      .mobile-shortcuts {
+        display: flex;
+        gap: 8px;
+        border-top: 1px solid var(--line);
+        padding: 4px 0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--spruce);
       }
+      .mobile-shortcuts a {
+        display: flex;
+        flex: 1 1 0;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        border-radius: 8px;
+      }
+      .mobile-shortcuts a:hover { background: rgba(47, 74, 60, 0.08); }
 
       .nav {
         gap: 10px;
@@ -834,7 +877,7 @@
         <img class="logo-mark" src="images/hidden-thicket-logo-transparent.png" alt="Hidden Thicket Quilt & Saw logo" />
         <span>Hidden Thicket Quilt &amp; Saw</span>
       </div>
-      <nav aria-label="Main navigation">
+      <nav class="desktop-nav" aria-label="Main navigation">
         <ul>
           <li><a href="#services">Services</a></li>
           <li><a href="#quilting">Quilting</a></li>
@@ -846,6 +889,11 @@
         </ul>
       </nav>
     </div>
+    <nav class="wrap mobile-shortcuts" aria-label="Quick links">
+      <a href="#pricing">Pricing</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
   <main id="top">
@@ -1174,6 +1222,7 @@
             Browse our custom pattern library on Etsy
           </a>
         </div>
+        <p class="review-link"><a href="https://www.etsy.com/shop/QuiltandSaw#reviews" target="_blank" rel="noopener" onclick="gtag('event','etsy_click',{ 'event_category':'engagement','event_label':'pattern_reviews' });">Read pattern reviews on Etsy</a></p>
       </div>
     </section>
 
@@ -1230,6 +1279,7 @@
             <h2>Ready to talk through a project</h2>
             <p>Send us a note to schedule a consultation, request an estimate, or start the intake process for longarm quilting, custom pattern design, or woodworking.</p>
             <p class="phone-line">Phone: <a href="tel:19075211495" onclick="gtag('event','phone_click',{ 'event_category':'engagement','event_label':'contact_section_phone' });">907.521.1495</a></p>
+            <p class="email-line">Email: <a href="mailto:hiddenthicket@outlook.com" onclick="gtag('event','email_click',{ 'event_category':'engagement','event_label':'contact_email_address' });">hiddenthicket@outlook.com</a></p>
           </div>
           <a class="btn" href="mailto:hiddenthicket@outlook.com" onclick="gtag('event','email_click',{ 'event_category':'engagement','event_label':'footer_contact' });">Email Us Today</a>
         </div>
