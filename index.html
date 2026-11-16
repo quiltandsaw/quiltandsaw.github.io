@@ -671,6 +671,10 @@
     .gallery-controls { display: none; }
     .gallery-controls [hidden] { display: none; }
     @media (max-width: 860px) {
+      #why-hidden-thicket {
+        display: none;
+      }
+
       html,
       body {
         overflow-x: hidden;
@@ -850,8 +854,9 @@
         <div>
           <div class="eyebrow">Wasilla, Alaska · By appointment</div>
           <h1>Longarm quilting and custom woodworking, made with care</h1>
-          <p class="lead">Based in Wasilla, Alaska, we provide professional longarm quilting, original quilt pattern design, and handcrafted woodworking with an emphasis on thoughtful craftsmanship, clean finishes, and dependable service.</p>
-          <p class="local-signal">By appointment for Wasilla, Palmer, Big Lake, Eagle River, Anchorage, and the Mat-Su Valley.</p>
+          <p class="lead">Hidden Thicket Quilt &amp; Saw is a professional longarm quilting studio in Wasilla, Alaska, located off Engstrom Road. We serve quilters throughout the Mat-Su Valley, including Palmer and Big Lake, as well as Eagle River and Anchorage.</p>
+          <p class="lead">We use an Innova M28 longarm quilting machine and offer a wide selection of quilting patterns, thread colors, and custom-designed pantographs. Edge-to-edge quilting is $0.03/in&sup2;, with a typical 1&ndash;2 week turnaround.</p>
+          <p class="lead">Our home-based studio offers quilt consultations, drop-offs, and pick-ups by appointment only. Our address and driving directions are provided when scheduling your visit.</p>
           <div class="actions">
             <a class="btn btn-primary" href="mailto:hiddenthicket@outlook.com" onclick="gtag('event','email_click',{ 'event_category':'engagement','event_label':'hero_contact' });">Contact Us</a>
             <a class="btn btn-secondary icon-btn" href="https://quiltandsaw.etsy.com" target="_blank" rel="noopener" onclick="gtag('event','etsy_click',{ 'event_category':'engagement','event_label':'hero' });">
@@ -916,29 +921,7 @@
       </div>
     </section>
 
-    <section id="why-hidden-thicket">
-      <div class="wrap">
-        <div class="intro">
-          <div class="eyebrow">Why quilters choose Hidden Thicket</div>
-          <h2>Thoughtful quilting from intake to final stitch</h2>
-          <p class="muted">Every quilt gets personal attention, from pattern selection and thread color to final texture and drape.</p>
-        </div>
-        <div class="cards">
-          <article class="card">
-            <h3>Professional Longarm System</h3>
-            <p>Quilted on an Innova M28 longarm system with AutoPilot for consistent, repeatable stitch paths.</p>
-          </article>
-          <article class="card">
-            <h3>Original Pattern Options</h3>
-            <p>Choose from hundreds of available designs, including original patterns created and stitch-tested in-house.</p>
-          </article>
-          <article class="card">
-            <h3>Color &amp; Texture Guidance</h3>
-            <p>More than 160 OMNI 40wt solid thread colors are available in studio to help coordinate with your quilt.</p>
-          </article>
-        </div>
-      </div>
-    </section>
+
 
     <section id="pricing">
       <div class="wrap">
@@ -1195,6 +1178,30 @@
       </div>
     </section>
 
+    <section id="why-hidden-thicket">
+      <div class="wrap">
+        <div class="intro">
+          <div class="eyebrow">Why quilters choose Hidden Thicket</div>
+          <h2>Thoughtful quilting from intake to final stitch</h2>
+          <p class="muted">Every quilt gets personal attention, from pattern selection and thread color to final texture and drape.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <h3>Professional Longarm System</h3>
+            <p>Quilted on an Innova M28 longarm system with AutoPilot for consistent, repeatable stitch paths.</p>
+          </article>
+          <article class="card">
+            <h3>Original Pattern Options</h3>
+            <p>Choose from hundreds of available designs, including original patterns created and stitch-tested in-house.</p>
+          </article>
+          <article class="card">
+            <h3>Color &amp; Texture Guidance</h3>
+            <p>More than 160 OMNI 40wt solid thread colors are available in studio to help coordinate with your quilt.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section id="woodworking">
       <div class="wrap split">
         <div>
@@ -1352,8 +1359,6 @@
       let visibleCount = 6;
       const controls = document.createElement('div');
       controls.className = 'gallery-controls';
-      const status = document.createElement('p');
-      status.setAttribute('aria-live', 'polite');
       const more = document.createElement('button');
       const fewer = document.createElement('button');
       [more, fewer].forEach(button => {
@@ -1361,19 +1366,20 @@
         button.className = 'btn btn-secondary';
         button.setAttribute('aria-controls', gallery.id);
       });
-      more.textContent = 'Show more ' + label;
+      more.textContent = sectionId === 'gallery' ? 'View full quilt gallery' : 'View all patterns';
       fewer.textContent = 'Show fewer';
-      controls.append(status, more, fewer);
+      controls.append(more, fewer);
       gallery.after(controls);
       function render() {
         tiles.forEach((tile, index) => tile.classList.toggle('mobile-hidden', index >= visibleCount));
-        status.textContent = 'Showing ' + Math.min(visibleCount, tiles.length) + ' of ' + tiles.length + ' ' + label;
+        more.setAttribute('aria-expanded', String(visibleCount > 6));
+        fewer.setAttribute('aria-expanded', String(visibleCount > 6));
         more.hidden = visibleCount >= tiles.length;
         fewer.hidden = visibleCount <= 6;
       }
       more.addEventListener('click', () => {
         const firstNew = visibleCount;
-        visibleCount = Math.min(visibleCount + 6, tiles.length);
+        visibleCount = tiles.length;
         render();
         tiles[firstNew].querySelector('a').focus();
       });
